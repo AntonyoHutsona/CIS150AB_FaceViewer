@@ -10,27 +10,28 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
 class FaceComponent extends JComponent {
-    public void paintComponent(Graphics g) {
+    public void paintComponent(Graphics graph) {
         // Recover Graphics2D.
-        Graphics2D g2 = (Graphics2D) g;
+        Graphics2D graph2D = (Graphics2D) graph;
 
         // Draw head it.
-        g2.setColor(Color.blue);
-        g2.setStroke(new BasicStroke((float) 2.25));
+        graph2D.setColor(Color.blue);
+        graph2D.setStroke(new BasicStroke((float) 2.25));
         Ellipse2D.Double head = new Ellipse2D.Double(95, 65, 120, 120);
-        g2.draw(head);
+        graph2D.draw(head);
 
         // Draw eyes.
-        g2.setColor(Color.blue);
         Ellipse2D.Double eyeLeft = new Ellipse2D.Double(130, 110, 10, 10);
-        g2.draw(eyeLeft);
+        graph2D.draw(eyeLeft);
         Ellipse2D.Double eyeRight = new Ellipse2D.Double(170, 110, 10, 10);
-        g2.draw(eyeRight);
+        graph2D.draw(eyeRight);
 
-        // Draw mouth.
-        g2.setColor(Color.blue);
-        Rectangle mouth = new Rectangle(127, 145, 55, 2);
-        g2.fill(mouth);
+		// Draw mouth
+		Line2D.Double mouth = new Line2D.Double(128,146,180,146);
+		graph2D.draw(mouth);
+
+		// Show message
+		graph2D.drawString("Hi Ms. Surber...", 115, 230);
 
     }
 }
