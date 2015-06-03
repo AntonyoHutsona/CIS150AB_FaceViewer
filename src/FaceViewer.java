@@ -27,8 +27,8 @@ class FaceViewer {
         * Add face object to frame.
         * Set frame to to visible.
         */
-        AtomicReference<FaceComponent> blueFace = new AtomicReference<>(new FaceComponent());
-        frame.add(blueFace.get());
+        FaceComponent blueFace = new FaceComponent();
+        frame.add(blueFace);
         frame.setVisible(true);
 
     }
