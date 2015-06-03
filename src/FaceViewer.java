@@ -5,6 +5,7 @@
  */
 
 import javax.swing.*;
+import java.util.concurrent.atomic.AtomicReference;
 
 class FaceViewer {
     public static void main(String[] args) {
@@ -16,7 +17,7 @@ class FaceViewer {
         frame.setSize(300, 300);
 
         // Frame title bar.
-        frame.setTitle("Face Viewer");
+        frame.setTitle("This Is My Happy Face");
 
         // Default closing action.
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -26,8 +27,8 @@ class FaceViewer {
         * Add face object to frame.
         * Set frame to to visible.
         */
-        FaceComponent component = new FaceComponent();
-        frame.add(component);
+        AtomicReference<FaceComponent> blueFace = new AtomicReference<>(new FaceComponent());
+        frame.add(blueFace.get());
         frame.setVisible(true);
 
     }
