@@ -5,7 +5,6 @@
  */
 
 import javax.swing.*;
-import java.util.concurrent.atomic.AtomicReference;
 
 class FaceViewer {
     public static void main(String[] args) {
