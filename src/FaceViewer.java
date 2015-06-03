@@ -5,11 +5,13 @@
  */
 
 import javax.swing.*;
+import java.awt.*;
 
 class FaceViewer {
+
     public static void main(String[] args) {
 
-        // Frame object.
+		// Frame object.
         JFrame frame = new JFrame();
 
         // Frame size.

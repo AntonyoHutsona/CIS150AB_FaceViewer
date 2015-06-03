@@ -12,6 +12,7 @@ import java.awt.*;
 import java.awt.geom.*;
 
 class FaceComponent extends JComponent {
+
     public void paintComponent(Graphics graph) {
 
         // Cast graph from Graphics to Graphics2D.
