@@ -5,6 +5,8 @@
  * OOP_Graphics_P2.11
  */
 
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.*;
@@ -33,6 +35,5 @@ class FaceComponent extends JComponent {
 
 		// Show message
 		graph2D.drawString("Hi Ms. Surber...", 115, 230);
-
     }
 }
